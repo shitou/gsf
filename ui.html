@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UI</title>
+    <link rel="stylesheet" href="css/mathml2.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <!--<script type="text/javascript" src="js/MathJax-master/MathJax.js?config=TeX-AMS_HTML-full"></script>-->
+
+	
+	<script src="js/gsf.js"></script>
+  </head>
+  <body>
+    <div class="gsfDialog">
+      <div class="gsfTitle">在线公式编辑</div>
+      <div class="gsfContent">
+        <div class="gsfTools">
+          <div class="gsfBaseTool">
+            <ul id="ulzf">
+              <li>
+                <span class="gbtName">&#x2264;&#x2260;&#x2248;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x2264;</mo></button>
+                  <button><mo class="text">&#x2265;</mo></button>
+                  <button><mo class="text">&#x226A;</mo></button>
+                  <button><mo class="text">&#x226B;</mo></button>
+                  <button><mo class="text">&#x227A;</mo></button>
+                  <button><mo class="text">&#x227B;</mo></button>
+                  <button><mo class="text">&#x22B2;</mo></button>
+                  <button><mo class="text">&#x22B3;</mo></button>
+                  <button><mo class="text">&#x223C;</mo></button>
+                  <button><mo class="text">&#x2248;</mo></button>
+                  <button><mo class="text">&#x2243;</mo></button>
+                  <button><mo class="text">&#x2245;</mo></button>
+                  <button><mo class="text">&#x2260;</mo></button>
+                  <button><mo class="text">&#x2261;</mo></button>
+                  <button><mo class="text">&#x225C;</mo></button>
+                  <button><mo class="text">&#x2259;</mo></button>
+                  <button><mo class="text">&#x2250;</mo></button>
+                  <button><mo class="text">&#x221D;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x2026;&#x22EF;&#x22EE;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x2026;</mo></button>
+                  <button><mo class="text">&#x22EF;</mo></button>
+                  <button><mo class="text">&#x22EE;</mo></button>
+                  <button><mo class="text">&#x22F0;</mo></button>
+                  <button><mo class="text">&#x22F1;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x00B1;&#x2213;&#x00D7;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x00B1;</mo></button>
+                  <button><mo class="text">&#x2213;</mo></button>
+                  <button><mo class="text">&#x00D7;</mo></button>
+                  <button><mo class="text">&#x2217;</mo></button>
+                  <button><mo class="text">&#x00F7;</mo></button>
+                  <button><mo class="text">&#x2295;</mo></button>
+                  <button><mo class="text">&#x2297;</mo></button>
+                  <button><mo class="text">&#x2299;</mo></button>
+                  <button><mo class="text">&#x22C5;</mo></button>
+                  <button><mo class="text">&#x00B7;</mo></button>
+                  <button><mo class="text">&#x2022;</mo></button>
+                  <button><mo class="text">&#x2218;</mo></button>
+                  <button><mo class="text">&#x2329;</mo></button>
+                  <button><mo class="text">&#x232A;</mo></button>
+                  <button><mo class="text">&#x301A;</mo></button>
+                  <button><mo class="text">&#x301B;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x2194;&#x2192;&#x2190;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x2194;</mo></button>
+                  <button><mo class="text">&#x2192;</mo></button>
+                  <button><mo class="text">&#x2190;</mo></button>
+                  <button><mo class="text">&#x2195;</mo></button>
+                  <button><mo class="text">&#x2191;</mo></button>
+                  <button><mo class="text">&#x2193;</mo></button>
+                  <button><mo class="text">&#x21D4;</mo></button>
+                  <button><mo class="text">&#x21D2;</mo></button>
+                  <button><mo class="text">&#x21D0;</mo></button>
+                  <button><mo class="text">&#x21D5;</mo></button>
+                  <button><mo class="text">&#x21D1;</mo></button>
+                  <button><mo class="text">&#x21D3;</mo></button>
+                  <button><mo class="text">&#x2922;</mo></button>
+                  <button><mo class="text">&#x2197;</mo></button>
+                  <button><mo class="text">&#x2199;</mo></button>
+                  <button><mo class="text">&#x2921;</mo></button>
+                  <button><mo class="text">&#x2198;</mo></button>
+                  <button><mo class="text">&#x2196;</mo></button>
+                  <button><mo class="text">&#x21C4;</mo></button>
+                  <button><mo class="text">&#x2942;</mo></button>
+                  <button><mo class="text">&#x2944;</mo></button>
+                  <button><mo class="text">&#x21CC;</mo></button>
+                  <button><mo class="text">&#x21A6;</mo></button>
+                  <button><mo class="text">&#x21B5;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x2234;&#x2235;&#x220D;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x2234;</mo></button>
+                  <button><mo class="text">&#x2235;</mo></button>
+                  <button><mo class="text">&#x220D;</mo></button>
+                  <button><mo class="text">&#x2203;</mo></button>
+                  <button><mo class="text">&#x2200;</mo></button>
+                  <button><mo class="text">&#x00AC;</mo></button>
+                  <button><mo class="text">&#x2227;</mo></button>
+                  <button><mo class="text">&#x2228;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x2208;&#x2209;&#x222A;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x2208;</mo></button>
+                  <button><mo class="text">&#x2209;</mo></button>
+                  <button><mo class="text">&#x222A;</mo></button>
+                  <button><mo class="text">&#x2229;</mo></button>
+                  <button><mo class="text">&#x222A;</mo></button>
+                  <button><mo class="text">&#x2229;</mo></button>
+                  <button><mo class="text">&#x2282;</mo></button>
+                  <button><mo class="text">&#x2283;</mo></button>
+                  <button><mo class="text">&#x2286;</mo></button>
+                  <button><mo class="text">&#x2287;</mo></button>
+                  <button><mo class="text">&#x2284;</mo></button>
+                  <button><mo class="text">&#x2205;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x2202;&#x2118;&#x2111;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x2202;</mo></button>
+                  <button><mo class="text">&#x2118;</mo></button>
+                  <button><mo class="text">&#x2111;</mo></button>
+                  <button><mo class="text">&#x211C;</mo></button>
+                  <button><mo class="text">&#x2135;</mo></button>
+                  <button><mo class="text">&#x211D;</mo></button>
+                  <button><mo class="text">&#x2124;</mo></button>
+                  <button><mo class="text">&#x2102;</mo></button>
+                  <button><mo class="text">&#x211A;</mo></button>
+                  <button><mo class="text">&#x2115;</mo></button>
+                  <button><mo class="text">&#x221E;</mo></button>
+                  <button><mo class="text">&#x210F;</mo></button>
+                  <button><mo class="text">&#x019B;</mo></button>
+                  <button><mo class="text">&#x2020;</mo></button>
+                  <button><mo class="text">&#x0394;</mo></button>
+                  <button><mo class="text">&#x2207;</mo></button>
+                  <button><mo class="text">&#x03A9;</mo></button>
+                  <button><mo class="text">&#x2127;</mo></button>
+                  <button><mo class="text">&#x22C4;</mo></button>
+                  <button><mo class="text">&#x2211;</mo></button>
+                  <button><mo class="text">&#x220F;</mo></button>
+                  <button><mo class="text">&#x2210;</mo></button>
+                  <button><mo class="text">&#x222B;</mo></button>
+                  <button><mo class="text">&#x00B0;</mo></button>
+                  <button><mo class="text">&#x2220;</mo></button>
+                  <button><mo class="text">&#x2221;</mo></button>
+                  <button><mo class="text">&#x2222;</mo></button>
+                  <button><mo class="text">&#x22A5;</mo></button>
+                  <button><mo class="text">&#x2225;</mo></button>
+                  <button><mo class="text">&#x25B3;</mo></button>
+                  <button><mo class="text">&#x25A1;</mo></button>
+                  <button><mo class="text">&#x25AD;</mo></button>
+                  <button><mo class="text">&#x25B1;</mo></button>
+                  <button><mo class="text">&#x25CB;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x03B1;&#x03B2;&#x03C7;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x03B1;</mo></button>
+                  <button><mo class="text">&#x03B2;</mo></button>
+                  <button><mo class="text">&#x03C7;</mo></button>
+                  <button><mo class="text">&#x03B4;</mo></button>
+                  <button><mo class="text">&#x03B5;</mo></button>
+                  <button><mo class="text">&#x03D5;</mo></button>
+                  <button><mo class="text">&#x03C6;</mo></button>
+                  <button><mo class="text">&#x03B3;</mo></button>
+                  <button><mo class="text">&#x03B7;</mo></button>
+                  <button><mo class="text">&#x03B9;</mo></button>
+                  <button><mo class="text">&#x03BA;</mo></button>
+                  <button><mo class="text">&#x03BB;</mo></button>
+                  <button><mo class="text">&#x03BC;</mo></button>
+                  <button><mo class="text">&#x03BD;</mo></button>
+                  <button><mo class="text">&#x03BF;</mo></button>
+                  <button><mo class="text">&#x03C0;</mo></button>
+                  <button><mo class="text">&#x03D6;</mo></button>
+                  <button><mo class="text">&#x03B8;</mo></button>
+                  <button><mo class="text">&#x03D1;</mo></button>
+                  <button><mo class="text">&#x03C1;</mo></button>
+                  <button><mo class="text">&#x03C3;</mo></button>
+                  <button><mo class="text">&#x03C2;</mo></button>
+                  <button><mo class="text">&#x03C4;</mo></button>
+                  <button><mo class="text">&#x03C5;</mo></button>
+                  <button><mo class="text">&#x03C9;</mo></button>
+                  <button><mo class="text">&#x03BE;</mo></button>
+                  <button><mo class="text">&#x03C8;</mo></button>
+                  <button><mo class="text">&#x03B6;</mo></button>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">&#x0391;&#x0392;&#x03A7;</span>
+                <div class="gbtDown gbzf">
+                  <button><mo class="text">&#x0391;</mo></button>
+                  <button><mo class="text">&#x0392;</mo></button>
+                  <button><mo class="text">&#x03A7;</mo></button>
+                  <button><mo class="text">&#x0394;</mo></button>
+                  <button><mo class="text">&#x0395;</mo></button>
+                  <button><mo class="text">&#x03A6;</mo></button>
+                  <button><mo class="text">&#x0393;</mo></button>
+                  <button><mo class="text">&#x0397;</mo></button>
+                  <button><mo class="text">&#x0399;</mo></button>
+                  <button><mo class="text">&#x039A;</mo></button>
+                  <button><mo class="text">&#x039B;</mo></button>
+                  <button><mo class="text">&#x039C;</mo></button>
+                  <button><mo class="text">&#x039D;</mo></button>
+                  <button><mo class="text">&#x039F;</mo></button>
+                  <button><mo class="text">&#x03A0;</mo></button>
+                  <button><mo class="text">&#x0398;</mo></button>
+                  <button><mo class="text">&#x03A1;</mo></button>
+                  <button><mo class="text">&#x03A3;</mo></button>
+                  <button><mo class="text">&#x03A4;</mo></button>
+                  <button><mo class="text">&#x03D2;</mo></button>
+                  <button><mo class="text">&#x03A9;</mo></button>
+                  <button><mo class="text">&#x039E;</mo></button>
+                  <button><mo class="text">&#x03A8;</mo></button>
+                  <button><mo class="text">&#x0396;</mo></button>
+                </div>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <mrow><mo>(</mo><mrow class="bg6"></mrow><mo>)</mo></mrow>
+                    <mrow><mo>[</mo><mrow class="bg6"></mrow><mo>]</mo></mrow>
+                  </span>
+                </span>
+                <div class="gbtDown bt1">
+                  <span class="math">
+                    <button class="selGs">
+						<mrow><mo>(</mo><mrow class="bg6"></mrow><mo>)</mo></mrow>
+					</button>
+                    <button class="selGs">
+						<mrow><mo>[</mo><mrow class="bg6"></mrow><mo>]</mo></mrow>
+					</button>
+                    <button class="selGs"><mrow><mo class="noedit1">{</mo><mrow class="bg6"></mrow><mo class="noedit1">}</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2329;</mo><mrow class="bg6"></mrow><mo class="noedit1">&#x232A;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">|</mo><mrow class="bg6"></mrow><mo class="noedit1">|</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2016;</mo><mrow class="bg6"></mrow><mo class="noedit1">&#x2016;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x230A;</mo><mrow class="bg6"></mrow><mo class="noedit1">&#x230B;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2308;</mo><mrow class="bg6"></mrow><mo class="noedit1">&#x2309;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">[</mo><mrow class="bg6"></mrow><mo class="noedit1">)</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">(</mo><mrow class="bg6"></mrow><mo class="noedit1">]</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">|</mo><mrow class="bg6"></mrow><mo class="noedit1">&#x232A;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2329;</mo><mrow class="bg6"></mrow><mo class="noedit1">|</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">[</mo><mrow class="bg6"></mrow><mo class="noedit1">[</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">]</mo><mrow class="bg6"></mrow><mo class="noedit1">]</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">]</mo><mrow class="bg6"></mrow><mo class="noedit1">[</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x301A;</mo><mrow class="bg6"></mrow><mo class="noedit1">&#x301B;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">(</mo><mrow class="bg6"></mrow></mrow></button>
+                    <button class="selGs"><mrow><mrow class="bg6"></mrow><mo class="noedit1">)</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">[</mo><mrow class="bg6"></mrow></mrow></button>
+                    <button class="selGs"><mrow><mrow class="bg6"></mrow><mo class="noedit1">]</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">{</mo><mrow class="bg6"></mrow></mrow></button>
+                    <button class="selGs"><mrow><mrow class="bg6"></mrow><mo>}</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2329;</mo><mrow class="bg6"></mrow></mrow></button>
+                    <button class="selGs"><mrow><mrow class="bg6"></mrow><mo class="noedit1">&#x232A;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo>|</mo><mrow class="bg6"></mrow></mrow></button>
+                    <button class="selGs"><mrow><mrow class="bg6"></mrow><mo class="noedit1">|</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2016;</mo><mrow class="bg6"></mrow></mrow></button>
+                    <button class="selGs"><mrow><mrow class="bg6"></mrow><mo class="noedit1">&#x2016;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x301A;</mo><mrow class="bg6"></mrow></mrow></button>
+                    <button class="selGs"><mrow><mrow class="bg6"></mrow><mo class="noedit1">&#x301B;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2329;</mo><mrow class="bg6"></mrow><mo class="noedit1">|</mo><mrow class="bg6"></mrow><mo class="noedit1">&#x232A;</mo></mrow></button>
+                  </span>
+				  <span class="math">
+                    <button class="selGs">
+						<mrow><mo class="noedit1">(</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">)</mo></mrow>
+					</button>
+                    <button class="selGs">
+						<mrow><mo class="noedit1">[</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">]</mo></mrow>
+					</button>
+                    <button class="selGs"><mrow><mo class="noedit1">{</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">}</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2329;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x232A;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">|</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">|</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2016;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x2016;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x230A;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x230B;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2308;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x2309;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">[</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">)</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">(</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">]</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">|</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x232A;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2329;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">|</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">[</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">[</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">]</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">]</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">]</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">[</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x301A;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x301B;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">(</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></mrow></button>
+                    <button class="selGs"><mrow><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">)</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">[</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></mrow></button>
+                    <button class="selGs"><mrow><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">]</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">{</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></mrow></button>
+                    <button class="selGs"><mrow><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">}</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2329;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></mrow></button>
+                    <button class="selGs"><mrow><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x232A;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">|</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></mrow></button>
+                    <button class="selGs"><mrow><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">|</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x2016;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></mrow></button>
+                    <button class="selGs"><mrow><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x2016;</mo></mrow></button>
+                    <button class="selGs"><mrow><mo class="noedit1">&#x301A;</mo><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></mrow></button>
+                    <button class="selGs"><mrow><mtable columnalign='left'><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable><mo class="noedit1">&#x301B;</mo></mrow></button>
+                    <button class="selGs" style="width:30%">
+						  <mrow><mo class="noedit1">&#x2329;</mo><mtable columnalign='left'><mtr><mtd><mn class="bg6"></mn></mtd></mtr><mtr><mtd><mn class="bg6"></mn></mtd></mtr></mtable>
+						  <mo class="noedit1">|</mo>
+						  <mtable columnalign='left'><mtr><mtd><mn class="bg6"></mn></mtd></mtr><mtr><mtd><mn class="bg6"></mn></mtd></mtr></mtable><mo class="noedit1">&#x232A;</mo></mrow></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <mfrac><mrow><mn class="bg6"></mn></mrow><mrow><mn class="bg6"></mn></mrow></mfrac>&nbsp;&nbsp;
+                    <msqrt style="position:relative;top:7px;"><mrow><mn class="bg6"></mn></mrow></msqrt>
+                  </span>
+                </span>
+                <div class="gbtDown bt2">
+                  <span class="math">
+                    <button class="selGs"><mfrac><mrow><mn class="bg6"></mn></mrow><mrow><mn class="bg6"></mn></mrow></mfrac></button>
+                    <button class="selGs"><mrow><mrow><mn class="bg6"></mn></mrow><mo>/</mo><mrow><mn class="bg6"></mn></mrow></mrow></button>
+                    <button class="selGs"><msqrt><mrow><mn class="bg6"></mn></mrow></msqrt></button>
+                    <button class="selGs"><mroot><mrow><mn class="bg6"></mn></mrow><mrow><mn>2</mn></mrow></mroot></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <msup><mrow><mn>2</mn></mrow><mrow><mn>1</mn></mrow></msup>&nbsp;&nbsp;
+                    <msub><mrow><mn>2</mn></mrow><mrow><mn>1</mn></mrow></msub>
+                  </span>
+                </span>
+                <div class="gbtDown bt3">
+                  <span class="math">
+                    <button class="selGs"><msup><mn>2</mn><mn>1</mn></msup></button>
+                    <button class="selGs"><msub><mn>2</mn><mn>1</mn></msub></button>
+                    <button class="selGs"><msubsup><mn>2</mn><mn>1</mn><mn>1</mn></msubsup></button>
+                    <button class="selGs"><mover><mn>2</mn><mn>1</mn></mover></button>
+                    <button class="selGs"><munder><mn>2</mn><mn>1</mn></munder></button>
+                    <button class="selGs"><munderover><mn>2</mn><mn>1</mn><mn>1</mn></munderover></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <class="math">
+                     <mrow><mo>&#x2211;</mo><mrow>1</mrow></mrow>
+                     <mrow><munder><mo>&#x2211;</mo><mrow>2</mrow></munder><mrow>1</mrow></mrow>
+                  </span>
+                </span>
+                <div class="gbtDown bt4">
+                  <span class="math">
+                    <button class="selGs"><mrow><mo>&#x2211;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x2211;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munderover><mo>&#x2211;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x2211;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msubsup><mo>&#x2211;</mo><mrow>1</mrow><mrow>1</mrow></msubsup><mrow>1</mrow></mrow></button>
+                 </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <mrow><mo>&#x222B;</mo><mrow>1</mrow></mrow>&nbsp;&nbsp;
+                    <mrow><munderover><mo>&#x222B;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow>
+                  </span>
+                </span>
+                <div class="gbtDown bt5">
+                  <span class="math">
+                    <button class="selGs"><mrow><mo>&#x222B;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munderover><mo>&#x222B;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msubsup><mo>&#x222B;</mo><mrow>1</mrow><mrow>1</mrow></msubsup><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x222B;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x222B;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x222C;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x222C;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x222C;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x222D;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x222D;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x222D;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x222E;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x222E;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x222E;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x222F;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x222F;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x222F;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x2230;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x2230;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x2230;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x2233;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x2233;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x2233;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x2232;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x2232;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x2232;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                     <mover accent='true'><mrow class="bg6"></mrow><mo stretchy='true'>&#x02DC;</mo></mover>
+                     <mover accent='true'><mrow class="bg6"></mrow><mo stretchy='true'>&#x005E;</mo></mover>
+                  </span>
+                </span>
+                <div class="gbtDown bt6">
+                  <span class="math">
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x02DC;</mo></mrow></mover></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x005E;</mo></mrow></mover></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x2322;</mo></mrow></mover></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#xFE39;</mo></mrow></mover></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x00AF;</mo></mrow></mover></button>
+                     <button class="selGs"><munder accentunder='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>_</mo></mrow></munder></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x2192;</mo></mrow></mover></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x2190;</mo></mrow></mover></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x21C0;</mo></mrow></mover></button>
+                     <button class="selGs"><mover accent='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x2194;</mo></mrow></mover></button>
+                     <button class="selGs"><munder accentunder='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x2192;</mo></mrow></munder></button>
+                     <button class="selGs"><munder accentunder='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x2190;</mo></mrow></munder></button>
+                     <button class="selGs"><munder accentunder='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x21C1;</mo></mrow></munder></button>
+                     <button class="selGs"><munder accentunder='true'><mrow><mrow class="bg6"></mrow></mrow><mrow><mo stretchy='true'>&#x2194;</mo></mrow></munder></button>
+                     <button class="selGs"><menclose notation='horizontalstrike'><mrow>1</mrow></menclose></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <mover><mo>&#x2192;</mo><mrow class="bg6"></mrow></mover>
+                    <munder><mo>&#x2192;</mo><mrow class="bg6"></mrow></munder>
+                  </span>
+                </span>
+                <div class="gbtDown bt7">
+                  <span class="math">
+                     <button class="selGs"><mover><mo>&#x2192;</mo><mrow class="bg6"></mrow></mover></button>
+                     <button class="selGs"><munder><mo>&#x2192;</mo><mrow class="bg6"></mrow></munder></button>
+                     <button class="selGs"><munderover><mo>&#x2192;</mo><mrow class="bg6"></mrow><mrow class="bg6"></mrow></munderover></button>
+                     <button class="selGs"><mover><mo>&#x2190;</mo><mrow class="bg6"></mrow></mover></button>
+                     <button class="selGs"><munder><mo>&#x2190;</mo><mrow class="bg6"></mrow></munder></button>
+                     <button class="selGs"><munderover><mo>&#x2190;</mo><mrow class="bg6"></mrow><mrow class="bg6"></mrow></munderover></button>
+                     <button class="selGs"><mover><mo>&#x2194;</mo><mrow class="bg6"></mrow></mover></button>
+                     <button class="selGs"><munder><mo>&#x2194;</mo><mrow class="bg6"></mrow></munder></button>
+                     <button class="selGs"><munderover><mo>&#x2194;</mo><mrow class="bg6"></mrow><mrow class="bg6"></mrow></munderover></button>
+                     <button class="selGs"><mover><mo>&#x21C4;</mo><mrow class="bg6"></mrow></mover></button>
+                     <button class="selGs"><munder><mo>&#x21C4;</mo><mrow class="bg6"></mrow></munder></button>
+                     <button class="selGs"><munderover><mo>&#x21C4;</mo><mrow class="bg6"></mrow><mrow class="bg6"></mrow></munderover></button>
+                     <button class="selGs"><munderover><mo>&#x21C4;</mo><mrow class="bg6"></mrow><mrow class="bg6"></mrow></munderover></button>
+                     <button class="selGs"><mover><mo>&#x21CC;</mo><mrow class="bg6"></mrow></mover></button>
+                     <button class="selGs"><munder><mo>&#x21CC;</mo><mrow class="bg6"></mrow></munder></button>
+                     <button class="selGs"><munderover><mo>&#x21CC;</mo><mrow class="bg6"></mrow><mrow class="bg6"></mrow></munderover></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <mrow><mo>&#x220F;</mo><mrow>1</mrow></mrow>&nbsp;
+                    <mrow><munder><mo>&#x220F;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow>
+                  </span>
+                </span>
+                <div class="gbtDown bt8">
+                  <span class="math">
+                    <button class="selGs"><mrow><mo>&#x220F;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x220F;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munderover><mo>&#x220F;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x220F;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msubsup><mo>&#x220F;</mo><mrow>1</mrow><mrow>1</mrow></msubsup><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x2210;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x2210;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munderover><mo>&#x2210;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x2210;</mo><mrow></mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msubsup><mo>&#x2210;</mo><mrow>1</mrow><mrow>1</mrow></msubsup><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x2229;</mo><mrow>1</mrow></mrow></button>
+					<button class="selGs"><mrow><munder><mo>&#x2229;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munderover><mo>&#x2229;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x2229;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msubsup><mo>&#x2229;</mo><mrow>1</mrow><mrow>1</mrow></msubsup><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><mo>&#x222A;</mo><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munder><mo>&#x222A;</mo><mrow>1</mrow></munder><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><munderover><mo>&#x222A;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msub><mo>&#x222A;</mo><mrow>1</mrow></msub><mrow>1</mrow></mrow></button>
+                    <button class="selGs"><mrow><msubsup><mo>&#x222A;</mo><mrow>1</mrow><mrow>1</mrow></msubsup><mrow>1</mrow></mrow></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <mtable><mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable>&nbsp;&nbsp;
+                    <mtable><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable>
+                  </span>
+                </span>
+                <div class="gbtDown bt9">
+                  <span class="math">
+                    <button class="selGs"><mtable><mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></button>
+                    <button class="selGs"><mtable><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></button>
+                    <button class="selGs"><mtable>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                    </mtable></button>
+                    <button class="selGs"><mtable><mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></button>
+                    <button class="selGs"><mtable>
+                        <mtr><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                        <mtr><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                        <mtr><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                    </mtable></button>
+                    <button class="selGs"><mtable>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                    </mtable></button>
+                    <button class="selGs"><mtable><mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></button>
+                    <button class="selGs"><mtable><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr><mtr><mtd><mrow class="bg6"></mrow></mtd></mtr></mtable></button>
+                    <button class="selGs"><mtable>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                      <mtr><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd><mtd><mrow class="bg6"></mrow></mtd></mtr>
+                    </mtable></button>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="gbtName">
+                  <span class="math">
+                    <menclose notation='top left'><mrow class="bg6"></mrow></menclose>&nbsp;&nbsp;
+                    <menclose notation='actuarial'><mrow class="bg6"></mrow></menclose>
+                  </span>
+                </span>
+                <div class="gbtDown bt10">
+                  <span class="math">
+                    <button class="selGs"><menclose notation='top left'><mrow class="bg6"></mrow></menclose></button>
+                    <button class="selGs"><menclose notation='actuarial'><mrow class="bg6"></mrow></menclose></button>
+                    <button class="selGs"><menclose notation='bottom left'><mrow class="bg6"></mrow></menclose></button>
+                    <button class="selGs"><menclose notation='bottom right'><mrow class="bg6"></mrow></menclose></button>
+                    <button class="selGs"><menclose notation='box'><mrow class="bg6"></mrow></menclose></button>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="gsfMoreTool">
+            <div class="gsfUseTool">
+              <span class="math gbzf">
+                <button class="selGs"><mi>&#x03C0;</mi></button>
+                <button class="selGs"><mi>&#x03B8;</mi></button>
+                <button class="selGs"><mi>&#x221E;</mi></button>
+                <button class="selGs"><mo>&#x2208;</mo></button>
+                <button class="selGs"><mo>&#x2192;</mo></button>
+                <button class="selGs"><mo>&#x2202;</mo></button>
+                <button class="selGs"><mo>&#x2264;</mo></button>
+                <button class="selGs"><mo>&#x2260;</mo></button>
+                <button class="selGs"><mo>&#x00B1;</mo></button>
+                <button class="selGs"><mrow><mo>(</mo><mrow>1</mrow><mo>)</mo></mrow></button>
+                <button class="selGs"><mrow><mo>[</mo><mrow></mrow><mo>]</mo></mrow></button>
+                <button class="selGs"><mrow><mo>{</mo><mrow></mrow><mo>}</mo></mrow></button>
+                <button class="selGs"><mfrac><mrow>1</mrow><mrow>2</mrow></mfrac></button>
+                <button class="selGs"><mrow><munderover><mo>&#x2211;</mo><mrow>1</mrow><mrow>1</mrow></munderover><mrow>1</mrow></mrow></button>
+                <button class="selGs" style="width:40px;"><msqrt><mrow>2</mrow></msqrt></button>
+                <button class="selGs"><msup><mn>2</mn><mrow>1</mrow></msup></button>
+                <button class="selGs"><msub><mn>2</mn><mrow>1</mrow></msub></button>
+                <button class="selGs"><msubsup><mn>2</mn><mrow>1</mrow><mrow>1</mrow></msubsup></button>
+              </span>
+            </div>
+            <div class="gsfGGTool">
+              <ul class="gsfGGtitle">
+                <li class="active">代数</li>
+                <li>推导</li>
+                <li>统计</li>
+                <li>矩阵</li>
+                <li>集</li>
+                <li>三角函数</li>
+                <li>几何</li>
+              </ul>
+              <div class="gsfGGList">
+                <div class="gsfGGContent">
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo class="bgnone"></mo></mrow></msqrt></button>
+                      <button class="selGs"><munder><mrow><mi>lim</mi></mrow><mrow><mi>x</mi><mo class="text">&#x2192;</mo><mi>&#x221E;</mi></mrow></munder></button>
+                      <button class="selGs"><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></button>
+                      <button class="selGs"><mfrac><mrow><mo>&#x2212;</mo><mi>b</mi><mo>&#x00B1;</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></button>
+                      <button class="selGs"><mfrac><mrow><mi>n</mi><mo>!</mo></mrow><mrow><mi>r</mi><mo>!</mo><mrow><mo>(</mo><mrow><mi>n</mi><mo>−</mo><mi>r</mi></mrow><mo >)</mo></mrow><mo>!</mo></mrow></mfrac></button>
+                      <button class="selGs"><mfrac><mn>1</mn><mn>2</mn></mfrac></button>
+                    </span>
+                  </div>
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mi>&#x2124;</mi></button>
+                      <button class="selGs"><mi mathvariant='double-struck'>k</mi></button>
+                      <button class="selGs"><mi mathvariant='double-struck'>F</mi></button>
+                      <button class="selGs"><mi mathvariant='double-struck'>S</mi></button>
+                      <button class="selGs"><mi mathvariant='fraktur'>A</mi></button>
+                      <button class="selGs"><mi mathvariant='fraktur'>M</mi></button>
+                      <button class="selGs"><mo>&#x22B8;</mo></button>
+					  <button class="selGs"><mo>&#x2297;</mo></button>
+                      <button class="selGs"><mo>&#x2295;</mo></button>
+					  <button class="selGs"><mo>&#x22B2;</mo></button>
+                      <button class="selGs"><mo>&#x22B3;</mo></button>
+                      <button class="selGs"><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow></button>
+                      <button class="selGs"><mi>&#x221E;</mi></button>
+                      <button class="selGs"><msqrt><mn>2</mn></msqrt></button>
+                    </span>
+                  </div>
+                </div>
+                <div class="gsfGGContent">
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></button>
+                      <button class="selGs"><mfrac><mrow><mi>&#x0394;</mi><mi>y</mi></mrow><mrow><mi>&#x0394;</mi><mi>x</mi></mrow></mfrac></button>
+                      <button class="selGs"><mfrac><mrow><mi>&#x03B4;</mi><mi>y</mi></mrow><mrow><mi>&#x03B4;</mi><mi>x</mi></mrow></mfrac></button>
+                      <button class="selGs"><mfrac><mrow><msup><mo>&#x2202;</mo><mn>2</mn></msup><mi>&#x03A9;</mi></mrow><mrow><mo>&#x2202;</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac></button>
+                      <button class="selGs"><mfrac><mrow><msup><mo>&#x2202;</mo><mn>2</mn></msup><mi>&#x03A9;</mi></mrow><mrow><mo>&#x2202;</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></mfrac></button>
+                      <button class="selGs"><mfrac><mrow><msup><mo>&#x2202;</mo><mn>2</mn></msup><mi>&#x03A9;</mi></mrow><mrow><mo>&#x2202;</mo><mi>u</mi><mo>&#x2202;</mo><mi>v</mi></mrow></mfrac></button>
+                      <button class="selGs"><munder><mrow><mi>lim</mi></mrow><mrow><mi>&#x03B4;</mi><mi>x</mi><mo class="text">&#x2192;</mo><mn>0</mn></mrow></munder></button>
+                    </span>
+                  </div>
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mrow><mi>d</mi><mi>x</mi></mrow></button>
+                      <button class="selGs"><mrow><mi>d</mi><mi>y</mi></mrow></button>
+                      <button class="selGs"><mrow><mo>&#x2202;</mo><mi>x</mi></mrow></button>
+                      <button class="selGs"><mrow><mo>&#x2202;</mo><mi>y</mi></mrow></button>
+                      <button class="selGs"><mrow><mi>&#x211D;</mi></mrow></button>
+                      <button class="selGs"><mrow><mi>x</mi><mo>&#x2208;</mo><mi>&#x211D;</mi></mrow></button>
+                    </span>
+
+                  </div>
+                </div>
+                <div class="gsfGGContent">
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mrow>
+                       <munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+                       <mrow><mrow class="bgnone"></mrow><msub><mi>X</mi><mi>i</mi></msub></mrow>
+                      </mrow></button>
+                      <button class="selGs"><mrow>
+                       <munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+                       <mrow><mrow class="bgnone"></mrow><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup></mrow>
+                      </mrow></button>
+                      <button class="selGs"><mrow>
+                       <munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+                       <mrow><mrow class="bgnone"></mrow><msub><mi>X</mi><mi>i</mi></msub><mrow class="bgnone"></mrow><msub><mi>Y</mi><mi>i</mi></msub></mrow>
+                      </mrow></button>
+                      <button class="selGs"><mfrac><mn>1</mn><mi>n</mi></mfrac></button>
+                      <button class="selGs"><mrow>
+                       <munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+                       <mrow><msup><mrow><mrow class="bgnone"></mrow><mrow><mo stretchy='false'>(</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>&#x2212;</mo><mover accent='true'><mrow><mi>X</mi></mrow><mrow><mo>&#x00AF;</mo></mrow></mover></mrow><mo stretchy='false'>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+                      </mrow></button>
+                      <button class="selGs"><mrow class="del"><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></button>
+                      <button class="selGs"><mfrac><mrow><mi>x</mi><mo>&#x2212;</mo><mi>&#x03BC;</mi></mrow><mi>&#x03C3;</mi></mfrac></button>
+                    </span>
+                  </div>
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mfrac><mn>1</mn><mi>n</mi></mfrac></button>
+                      <button class="selGs"><msub><mi>&#x03BC;</mi><mi>X</mi></msub></button>
+                      <button class="selGs"><msub><mi>&#x03C3;</mi><mi>X</mi></msub></button>
+                      <button class="selGs"><msubsup><mi>&#x03C3;</mi><mi>X</mi><mn>2</mn></msubsup></button>
+                    </span>
+                  </div>
+                </div>
+                <div class="gsfGGContent">
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mrow><mo>(</mo><mtable>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>12</mn></mrow></msub></mtd></mtr>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>22</mn></mrow></msub></mtd></mtr>
+                        </mtable><mo>)</mo></mrow></button>
+                      <button class="selGs"><mrow><mo>(</mo><mtable>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>13</mn></mrow></msub></mtd></mtr>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>23</mn></mrow></msub></mtd></mtr>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>31</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>32</mn></mrow></msub></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>33</mn></mrow></msub></mtd></mtr>
+                        </mtable><mo>)</mo></mrow></button>
+                      <button class="selGs"><mrow><mo>(</mo><mtable>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><mo>&#x2026;</mo></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr>
+                         <mtr><mtd><mo>&#x22EE;</mo></mtd><mtd><mo>&#x22F1;</mo></mtd><mtd><mo>&#x22EE;</mo></mtd></mtr>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mi>m</mi><mn>1</mn></mrow></msub></mtd><mtd><mo>&#x22EF;</mo></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub></mtd></mtr>
+                        </mtable><mo>)</mo></mrow></button>
+                      <button class="selGs"><mrow><mo>(</mo><mtable>
+                         <mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+                         <mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        </mtable><mo>)</mo></mrow></button>
+                      <button class="selGs"><mrow><mo>(</mo><mtable>
+                         <mtr><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mn>1</mn></msub></mtd><mtd><mrow></mrow></mtd><mtd><mn>0</mn></mtd></mtr>
+                         <mtr><mtd><mrow></mrow></mtd><mtd><mo>&#x22F1;</mo></mtd><mtd><mrow></mrow></mtd></mtr>
+                         <mtr><mtd><mn>0</mn></mtd><mtd><mrow></mrow></mtd><mtd><mrow class="bgnone"></mrow><msub><mi>a</mi><mi>n</mi></msub></mtd></mtr>
+                        </mtable><mo>)</mo></mrow></button>
+                    </span>
+                  </div>
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mo>&#x2026;</mo></button>
+                      <button class="selGs"><mo>&#x22EF;</mo></button>
+                      <button class="selGs"><mo>&#x22EE;</mo></button>
+                      <button class="selGs"><mo>&#x22F0;</mo></button>
+                      <button class="selGs"><mo>&#x22F1;</mo></button>
+                    </span>
+                  </div>
+                </div>
+                <div class="gsfGGContent">
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mrow><munderover><mo>&#x222A;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>X</mi><mi>i</mi></msub></mrow></mrow></button>
+                      <button class="selGs"><mrow><munderover><mo>&#x2229;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>X</mi><mi>i</mi></msub></mrow></mrow></button>
+                    </span>
+                  </div>
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mo>&#x2205;</mo></button>
+                      <button class="selGs"><mo>&#x2208;</mo></button>
+                      <button class="selGs"><mo>&#x2282;</mo></button>
+                      <button class="selGs"><mo>&#x2283;</mo></button>
+                      <button class="selGs"><mo>&#x2286;</mo></button>
+                      <button class="selGs"><mo>&#x2287;</mo></button>
+                      <button class="selGs"><mo>&#x22D0;</mo></button>
+                      <button class="selGs"><mo>&#x22D1;</mo></button>
+                      <button class="selGs"><mo>&#x2288;</mo></button>
+                      <button class="selGs"><mo>&#x2289;</mo></button>
+                      <button class="selGs"><mo>&#x2291;</mo></button>
+                      <button class="selGs"><mo>&#x2292;</mo></button>
+                      <button class="selGs"><mo>&#x2201;</mo></button>
+                      <button class="selGs"><mo>&#x228E;</mo></button>
+                    </span>
+                  </div>
+                </div>
+                <div class="gsfGGContent">
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mi>&#x03B8;</mi></mrow></button>
+                      <button class="selGs"><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mi>&#x03B8;</mi></mrow></button>
+                      <button class="selGs"><mrow><mi>arcsin</mi><mi>&#x03B8;</mi></mrow></button>
+                      <button class="selGs"><msup><mi>e</mi><mrow><mi>i</mi><mi>&#x03B8;</mi></mrow></msup></button>
+                      <button class="selGs"><mfrac><mrow><mtext>Opposite</mtext></mrow><mrow><mtext>Hypotenuse</mtext></mrow></mfrac></button>
+                      <button class="selGs"><mrow><mo>(</mo><mrow><mfrac><mi>&#x03C0;</mi><mn>2</mn></mfrac><mo>&#x2212;</mo><mi>&#x03B8;</mi></mrow><mo>)</mo></mrow></button>
+                    </span>
+                  </div>
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mi>&#x03B8;</mi></button>
+                      <button class="selGs"><mi>&#x03C6;</mi></button>
+                      <button class="selGs"><mfrac><mn>1</mn><mn>2</mn></mfrac></button>
+                      <button class="selGs"><msup><mi>e</mi><mrow><mi>i</mi><mi>&#x03B8;</mi></mrow></msup></button>
+                      <button class="selGs"><msqrt><mn>2</mn></msqrt></button>
+                      <button class="selGs"><mi>&#x03C0;</mi></button>
+                      <button class="selGs"><mfrac><mi>&#x03C0;</mi><mn>2</mn></mfrac></button>
+                      <button class="selGs"><mfrac><mi>&#x03C0;</mi><mn>3</mn></mfrac></button>
+                      <button class="selGs"><mfrac><mi>&#x03C0;</mi><mn>4</mn></mfrac></button>
+                      <button class="selGs"><mfrac><mi>&#x03C0;</mi><mn>6</mn></mfrac></button>
+                      <button class="selGs"><msup><mrow><mn>90</mn></mrow><mo>&#x2218;</mo></msup></button>
+                      <button class="selGs"><msup><mrow><mn>60</mn></mrow><mo>&#x2218;</mo></msup></button>
+                    </span>
+                  </div>
+                </div>
+                <div class="gsfGGContent">
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mover accent='true'><mrow><mi>A</mi><mi>B</mi></mrow><mo stretchy='true'>&#x2192;</mo></mover></button>
+                      <button class="selGs"><mover accent='true'><mrow><mi>A</mi><mi>B</mi></mrow><mo stretchy='true'>&#x2194;</mo></mover></button>
+                      <button class="selGs"><mover accent='true'><mrow><mi>A</mi><mi>B</mi><mi>C</mi></mrow><mo stretchy='true'>&#x2322;</mo></mover></button>
+                      <button class="selGs"><mrow class="del"><mo>&#x25B3;</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></button>
+                    </span>
+                  </div>
+                  <div class="gsfRow">
+                    <span class="math">
+                      <button class="selGs"><mo>&#x2220;</mo></button>
+                      <button class="selGs"><mo>&#x2221;</mo></button>
+                      <button class="selGs"><mo>&#x2222;</mo></button>
+                      <button class="selGs"><mo>&#x22A5;</mo></button>
+                      <button class="selGs"><mo>&#x25B3;</mo></button>
+                      <button class="selGs"><mo>&#x25B2;</mo></button>
+                      <button class="selGs"><mo>&#x25A1;</mo></button>
+                      <button class="selGs"><mo>&#x25B1;</mo></button>
+                      <button class="selGs"><mo>&#x25CB;</mo></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gsfInput" id="gsf">
+			<span class="math">
+				<mrow>
+					<mrow class="bg6" contenteditable="true">
+					
+					</mrow>
+				</mrow>
+			</span>
+        </div>
+		<div class="box" id="box" style="display:none;">
+			<div id="MathOutput" class="output">$${}$$</div>	
+		</div>
+      </div>
+    </div>
+	<div class="gsfResult">
+		<p style="display:none">直接编辑LaTeX和MathML：<input type="text" placeholder="输入latex或mathml公式" id="getLatex" class="latexTxt"/></p>
+		<p><button id="btnGetGsf">插入公式</button></p>
+		<div id="gsfMath" contenteditable="true" style="border:1px solid #ddd;margin-top:10px;padding:10px;display:none;background-color:#fff;border:1px solid #aaa;">
+			
+		</div>
+		
+		
+	</div>
+  </body>
+</html>

@@ -1,0 +1,901 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* See https://github.com/fred-wang/mathml.css */
+
+/* Substantial revisions by William F. Hammond in April-June 2014 */
+
+/**********
+@font-face {
+    font-family: "LatinModernRomanWOFF";
+    src: url('font/lmroman12-regular.woff');
+}
+**********/
+
+@font-face {
+  font-family: "LatinModernRomanWOFF";
+  src: url('../font/lmroman12-regular.woff');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatinModernRomanWOFF";
+  src: url('../font/lmroman12-bold.woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "LatinModernRomanWOFF";
+  src: url('../font/lmroman12-italic.woff');
+  font-style: italic;
+}
+@font-face {
+  font-family: "LatinModernMonoWOFF";
+  src: url('../font/lmmono12-regular.woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatinModernSansWOFF";
+  src: url('../font/lmsans12-regular.woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatinModernSansWOFF";
+  src: url('../font/lmsans12-oblique.woff');
+  font-style: italic, oblique;
+}
+
+@font-face {
+  font-family: "LatinModernMathWOFF";
+  src: url('../font/latinmodern-math.woff');
+}
+@font-face {
+    font-family: "EuclidFrakturWOFF";
+    src: url('../font/eufrak.woff');
+}
+@font-face {
+    font-family: "EuclidMathOneWOFF";
+    src: url('../font/eumat1.woff');
+}
+@font-face {
+    font-family: "EuclidMathTwoWOFF";
+    src: url('../font/eumat2.woff');
+}
+
+body {
+    font-family: "LatinModernRomanWOFF";
+    background-color: #FCFCFC;
+    color: #000033;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: center;
+}
+h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+}
+h3 {
+    font-size: 1.45em;
+    font-weight: bold;
+    text-align: center;
+}
+h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+kbd {
+    font-weight: normal;
+}
+
+
+/* math */
+
+math,.math {
+    font-family: "LatinModernMathWOFF";
+    font-size: 1em;
+    display: inline;
+    text-indent: 0;
+    white-space: nowrap;
+	/* overflow:hidden; */
+}
+math,.math {
+    font-family: "LatinModernMathWOFF";
+    font-size: 1em;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    text-indent: 0;
+    white-space: nowrap;   /* WFH is a hawk on this */
+}
+MATH[class="tdisplay"] {
+    font-family: "LatinModernMathWOFF";
+    font-size: 1em;
+    display: block;
+    text-indent: 0;
+    white-space: nowrap;
+}
+math[display="block"] {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+mrow {
+  display: inline-block;
+}
+mfenced {
+  display: inline;
+}
+mrow[class="mathflow"] {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-indent: 0;
+    white-space: nowrap;
+}
+mfenced[class="mathflow"] {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-indent: 0;
+    white-space: nowrap;
+}
+/*************************
+MAT[display="block"] {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+*************************/
+mtext {
+    font-family: LatinModernRomanWOFF;
+}
+mi {
+    font-style: italic;
+}
+mo {
+    margin-right: .1em;
+    margin-left: .1em;
+}
+mn {
+    line-height: 2.5ex;
+}
+ms::before, ms::after {
+    content:"\0022";
+}
+ms[lquote]::before {
+    content: attr(lquote);
+}
+ms[rquote]::after {
+    content: attr(rquote);
+}
+
+/* token elements */
+mspace::before {
+    content: "\A0";
+}
+mspace[width="3em"]::before {
+    content: "\A0\A0\A0\A0\A0\A0";
+}
+mspace[width="2em"]::before {
+    content: "\A0\A0\A0\A0";
+}
+mspace[width="1.8em"]::before {
+    content: "\A0\A0\A0";
+}
+mspace[width="1em"]::before{
+    content: "\A0\A0";
+}
+mspace[width="0.5em"]::before {
+    content: "\2009";
+}
+mspace[width="0.3em"]::before {
+    content: "\2009";
+}
+mspace[width="0.2em"]::before {
+    width: 0.2em;
+    content: "\2009";
+}
+mspace[width="0.1em"]::before {
+    width: 0.1em;
+    content: "\2009";
+}
+
+/* mathvariants */
+[mathvariant="normal"] {
+    font-family: "LatinModernMathWOFF";
+    font-weight: normal;
+    font-style: normal;
+}
+[mathvariant="bold"] {
+    font-family: "LatinModernMathWOFF";
+    font-weight: bold;
+}
+[mathvariant="italic"] {
+    font-family: "LatinModernMathWOFF";
+    font-style: italic;
+}
+[mathvariant="bold-italic"] {
+    font-family: "LatinModernMathWOFF";
+    font-weight: bold;
+    font-style: italic;
+}
+[mathvariant="monospace"] {
+    font-family: "LatinModernMonoWOFF";
+    font-style: normal;
+}
+[mathvariant="sans-serif"] {
+    font-family: "LatinModernSansWOFF";
+}
+[mathvariant="bold-sans-serif"] {
+    font-family: "LatinModernSansWOFF";
+    font-weight: bold;
+}
+[mathvariant="sans-serif-italic"] {
+    font-family: "LatinModernSansWOFF";
+    font-style: italic;
+}
+[mathvariant="sans-serif-bold-italic"] {
+    font-family: "LatinModernSansWOFF";
+    font-weight: bold;
+    font-style: italic;
+}
+/***  for font casting, e.g., \mathfrak, \mathcal, and \mathbb  ***/
+[mathvariant="fraktur"] {
+  font-family: "EuclidFrakturWOFF", serif;
+}
+[mathvariant="script"] {
+  font-family: "EuclidMathOneWOFF", serif;
+}
+[mathvariant="double-struck"] {
+  font-family: "EuclidMathTwoWOFF", serif;
+}
+
+/* fraction */
+mfrac {
+    display: inline-table !important;
+    table-layout: auto;
+    vertical-align: middle;
+    padding: 0 0.1em 0 0.1em;
+    border-collapse: collapse;
+    line-height: 2.5ex;
+}
+mfrac > * {
+    display: table-row !important;
+    font-size: 0.8em;
+	text-align:center;
+}
+mfrac > *:nth-child(1) > * {
+    text-align: center;
+}
+mfrac > *:nth-child(2) > * {
+    text-align: center;
+}
+mfrac > mrow:nth-child(1) > mrow {
+    display: table-cell !important;
+    text-align: center;
+}
+mfrac > mrow:nth-child(2) > mrow {
+/*    display: table-cell !important;*/
+    text-align: center;
+    padding: 2% 1% 2% 1%;
+}
+mfrac:not([linethickness="0"]) > *:nth-child(1) {   
+    border-bottom: thin solid black;
+}
+mfrac:not([linethickness="0"]) > *:nth-child(2) {
+    border-top: thin solid black;
+}
+mfrac > *:nth-child(3)::before{
+    display: inline;
+    color: red;
+    content: "ERROR: mfrac can only have 2 children";
+}
+
+/* msub, msup, msubsup, mmultiscripts */
+
+/*****
+msub, msup {
+  position: relative;
+}
+*****/
+
+msub > *:nth-child(2) {
+  display: inline;
+  font-size: 0.8em;
+  vertical-align: sub;
+  vertical-align: text-bottom\0;
+  /* position: relative; */
+  /* bottom: -1ex;       */
+}
+
+msub > mn:nth-child(2) {
+  font-size: 0.65em;
+}
+
+/* top was  top: -1.3ex; */
+msup > *:nth-child(2) {
+  display: inline;
+  font-size: 0.8em;
+  vertical-align: super;
+  vertical-align: text-top\0;
+  padding-top: 0.2ex;
+  /* position: relative; */
+  /* top: -1.4ex; */
+}
+msup > mo[class="texprime"] {
+  font-family: LatinModernMathWOFF;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+/*** Handle msubsup with either the standard content model
+or the following alternative content model: (mssbase, msspost)
+where msspost is restricted to two children                   ***/
+
+msubsup {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+msubsup > *:nth-child(1) {
+  order: 1;
+  margin-right: 0.05em;
+}
+msubsup > *:nth-child(2) {
+  order: 2;
+  font-size: 0.8em;
+  position: relative;
+  bottom: -1ex;
+}
+msubsup > *:nth-child(3) {
+  order: 3;
+  font-size: 0.8em;
+  position: relative;
+  top: -1.3ex;
+}
+msubsup > mssbase {
+  order: 1;
+  vertical-align: baseline;
+}
+mrow[class="int"] > msubsup {
+  margin-right: 0.2em;
+  position: relative;
+}
+mrow[class="int"] > msubsup > mssbase {
+  font-size: 1.3em;
+  padding-right: 0;
+}
+msubsup > msspost:nth-child(2) {
+  order: 2;
+  display: inline-flex;
+  flex-direction: column;
+  position: static;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: flex-start;
+}
+msubsup > msspost:nth-child(2) > *:nth-child(1){
+  order: 2;
+}
+msubsup > msspost:nth-child(2) > *:nth-child(2){
+  order: 1;
+  position: relative;
+  top: 0.3ex;
+}
+/*** temp hold ************
+mrow[class="int"] {      ! commented out
+  margin: auto 0 auto 0;
+  position: relative;
+}
+mrow[class="prod"] {     ! commented out
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+mrow[class="sum"] {      ! commented out
+  display: inline;
+}
+**************************/
+mrow[class="int"] > msub:nth-child(1) > *:nth-child(2) {
+  font-size: 0.8em;
+  position: relative;
+  bottom: -1ex;
+  right: 0.5em;
+}
+mrow[class="int"] > msubsup > msspost > *:nth-child(1){
+  order: 2;
+  position: relative;
+  right: 0.5em;
+}
+mrow[class="int"] > msubsup > msspost > *:nth-child(2){
+  order: 1;
+  position: relative;
+  right: 0.1em;
+  top: -0.3ex;
+}
+mrow[class="int"] > mrow[class="int"]:nth-child(2) {
+  margin: auto 0 auto -0.75em;
+}
+mrow[class="int"] > mrow[class="sipbody"]{
+  margin-left: -0.3em;
+}
+/*** Handle mmultiscripts with alternative content model
+     (mbase, mmupost, (mmupre)?)                        
+     and with mmupost, mmupre restricted to two children
+     that can, for example, be mrows                     ***/
+
+mmultiscripts {
+  vertical-align: baseline;
+  align-self: baseline;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+mrow > mfrac {
+  vertical-align: middle;
+}
+mrow > mmultiscripts {
+  vertical-align: middle;
+}
+
+/* "vertical-align" applies only to (or inside?) inline
+   and table-cell elements; probably need
+   "align-self: center" when mmultiscripts' parent is
+   a flex-row with "align-items: baseline"                 */
+
+math > mmultiscripts,.math > mmultiscripts {
+  align-self: center;
+}
+mmultiscripts > mmubase {
+  order: 2;
+}
+mmultiscripts > mmupost {
+  order: 3;
+  font-size: 0.8em;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+mmupost > *:nth-child(1) {
+  order: 2;
+}
+mmupost > *:nth-child(2) {
+  order: 1;
+}
+mmultiscripts > mmupre {
+  order: 1;
+  font-size: 0.8em;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+mmupre > *:nth-child(1) {
+  order: 2;
+}
+mmupre > *:nth-child(2) {
+  order: 1;
+}
+mmupost > none, mmupre > none {
+  height: 2ex;
+}
+
+/* under/over scripts */
+munderover {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+munderover {
+    vertical-align: middle;
+}
+munderover > *:nth-child(1) {
+    margin: 0;
+}
+munderover > *:nth-child(2) {
+    font-size: 0.8em;
+    order: +1;
+    margin-top: -0.5ex;
+}
+munderover > *:nth-child(3) {
+    font-size: 0.8em;
+    order: -1;
+    margin-bottom: -0.5ex;
+}
+munder {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    /*vertical-align: text-top;*/
+    justify-content: flex-start;
+}
+munder > *:nth-child(1) {
+    padding: 0;
+    order: 0;
+}
+munder > *:nth-child(2) {
+    font-size: 0.8em;
+    padding: 0;
+    order: +1;
+    margin-top: -0.5ex;
+}
+mover {
+    vertical-align: text-bottom;
+    align-self: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+mover > *:nth-child(1) {
+    padding: 0;
+    order: 0;    
+}
+mover > *:nth-child(2) {
+    font-size: 0.8em;
+    padding: 0;
+    order: -1;
+    margin-bottom: -1ex;
+}
+
+/*** accents ***/
+mover[accent="true"] {
+    align-items: center;
+    vertical-align: 0.6ex;
+}
+mover[accent="true"] > *:nth-child(1){
+    padding: 0;
+}
+mover[accent="true"] > *:nth-child(2){
+    font-size: 1.3em;
+    padding: 0;
+    line-height: 0.75ex;
+    margin-bottom: -0.35ex;
+}
+mover[class="lowrider"] {
+    vertical-align: 1.45ex;
+}
+mover[class="lowrider"] > *:nth-child(2){
+    font-size: 1.1em;
+    padding: 0;
+    margin-bottom: -0.15ex;
+}
+mover[class="maybeequal"] {
+    position: relative;
+}
+mover[class="maybeequal"] > *:nth-child(1){
+    padding: 0;
+}
+mover[class="maybeequal"] > *:nth-child(2){
+    padding: 0;
+    font-size: 0.8em;
+    position: relative;
+    top: 0.7ex;
+}
+mover[class="overbrace"] > mo:nth-child(1) {
+    font-size: 3em;
+    line-height: 1ex;
+    margin-bottom: -1ex;
+    padding: 0;
+}
+mover[class="overbrace"] > mrow:nth-child(2) {
+    font-size: 0.7em;
+    line-height: 1ex;
+    margin-bottom: 2.5ex;
+    padding: 0;
+}
+
+/* roots */
+/* Note: when msqrt is a direct child of mfrac, it has been
+   styled as table-row, which means that its border-top will
+   extend the width of the mfrac                             */
+
+msqrt {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 0.3ex;
+    padding: 0.1ex 0;
+	position:relative;
+}
+
+msqrt > *:nth-child(2)::before {
+    color: red;
+    content: "Error: msqrt allowed only one child with this use of CSS";
+}
+
+msqrt > *:nth-child(1) {
+    display: inline-block;
+    padding: 0 0 0 0.05em;
+    line-height: 2.5ex;
+    border-top: thin solid;
+	
+}
+msqrt::before {
+    /*margin-left: -1.1em;
+    content: "\221A";
+    position: relative;
+    top: -1.9ex;
+    margin-top: -5ex;*/
+	background: url(../images/dui.png) no-repeat;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 90%;
+    left: -13px;
+    background-size: 100% 100%;
+}
+
+mroot {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 1em;
+    margin-top: 0.1ex;
+    align-items: center;
+	position:relative;
+}
+mroot::before {
+    margin-left: -1em;
+    content: "\221A";
+    position: relative;
+    top: -2.35ex;
+    margin-top: 1ex;
+	/*background: url(dui.png) no-repeat;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    left: -13px;
+    background-size: contain;*/
+
+}
+mroot > *:nth-child(1) {
+    padding: 0.1ex 0 0 0.05em;
+    order: 0;
+    border-top: thin solid;
+}
+
+mroot > *:nth-child(2) {
+    margin-right: .25em;
+    margin-left: -.75em;
+    font-size: 0.8em;
+    order: -1;
+    position: relative;
+    right: 0.25em;
+    top: -1ex;
+}
+
+/* menclose */
+menclose {
+  display: inline-table !important;
+  border-collapse: separate;
+  border-spacing: 0.4ex 0;
+}
+menclose[notation*="top"], menclose[notation*="actuarial"] {
+  border-top: solid thin;
+}
+menclose[notation*="bottom"], menclose[notation*="madruwb"] {
+    border-bottom: solid thin;
+}
+menclose[notation*="right"], menclose[notation*="actuarial"],
+menclose[notation*="madruwb"] {
+    border-right: solid thin;
+}
+menclose[notation*="left"] {
+    border-left: solid thin;
+}
+menclose[notation*="box"], menclose[notation*="roundedbox"],
+menclose[notation*="circle"] {
+    border: solid thin;
+}
+menclose[notation*="roundedbox"] {
+    border-radius: 15%;
+}
+menclose[notation*="circle"] {
+    border-radius: 50%;
+}
+menclose[notation*="horizontalstrike"] {
+    text-decoration: line-through;
+}
+
+/* table */
+mtable {
+    display: inline-table;
+    vertical-align: middle;
+}
+mtr {
+    display: table-row;
+}
+mtd {
+    display: table-cell;
+    padding: 0 0.5ex;
+	overflow: hidden;
+}
+munder[accentunder="false"] > mtable[class="substack"]:nth-child(2) {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.6em;
+    margin-top: 0.15ex;
+}
+munder[accentunder="false"] > mtable[class="substack"]:nth-child(2) > mtr {
+    display: inline;
+    line-height: 1.5ex;
+}
+munder[accentunder="false"] > mtable[class="substack"]:nth-child(2) > mtr > mtd {
+    display: inline;
+    text-align: center;
+}
+munder[accentunder="false"] > mo:nth-child(1) {
+    margin: 0.15ex 0.2em;
+}
+/**********
+munder[accentunder="false"] > mtable[class="substack"]:nth-child(2) {
+    border-collapse: collapse;
+    table-layout: auto;
+    margin: 0.15ex 0.35em;
+}
+munder[accentunder="false"] > mtable[class="substack"]:nth-child(2) > mtr {
+}
+munder[accentunder="false"] > mtable[class="substack"]:nth-child(2) > mtr > mtd {
+    font-size: 0.75em;
+    line-height: 1.5ex;
+    padding: 0.2ex 0em;
+}
+**********/
+
+/* mphantom */
+mphantom {
+    visibility: hidden;
+}
+
+/* merror */
+merror {
+    outline: solid thin red;
+}
+merror::before {
+    content: "Error: ";
+}
+
+/* annotations */
+semantics > *:first-child {
+    display: inline;
+}
+annotation, annotation-xml {
+    font-family: "LatinModernMonoWOFF";
+    display: none !important;
+}
+math:active > semantics > *:first-child,
+math:active > semantics > *:first-child {
+    display: none !important;
+}
+math:active annotation:first-of-type {
+    display: inline !important;
+}
+.math:active > semantics > *:first-child,
+.math:active > semantics > *:first-child {
+    display: none !important;
+}
+.math:active annotation:first-of-type {
+    display: inline !important;
+}
+mfenced {
+    display: inline;
+    margin: 0 0.1em 0ex 0.1em;
+}
+mfenced::before {
+    content: "(";
+    font-size: 1.5em;
+}
+mfenced::after {
+    content: ")";
+    font-size: 1.5em;
+}
+mfenced[open]::before {
+    content: attr(open);
+    font-size: 1.5em;
+}
+mfenced[close]::after {
+    content: attr(close);
+    font-size: 1.5em;
+}
+mfenced[open=""]::before {
+    font-size: inherit;
+}
+mfenced[close=""]::after {
+    font-size: inherit;
+}
+mfenced[class="pmatrix"] {
+    display: block;
+    border-left: 0.2ex solid;
+    border-right: 0.2ex solid;
+    border-radius: 0.5em;
+}
+mfenced[class="pmatrix"]::before {
+    content: "";
+}
+mfenced[class="pmatrix"]::after {
+    content: "";
+}
+mrow[class="int"] mfenced {
+    margin: 0 0.1em 0 0.1em;
+}
+mo[class="sol"] {
+  font-size: 1.3em;
+}
+mrow[class="prod"] > munder {
+  justify-content: center;
+}
+mrow[class="sipbody"] {
+  align-self: baseline;
+}
+mrow[class="sum"] > munderover > *:nth-child(2) {
+  margin-top: -0.5ex;
+}
+mrow[class="sum"] > munderover > *:nth-child(3) {
+  margin-bottom: -0.5ex;
+}
+mrow[class="list"] {
+  display: inline;
+  vertical-align: baseline;
+}
+/*** These next two are experimental ***/
+mrow[class="flex-end-list"] {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+mrow[class="center-list"] {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+msup > mn:nth-child(2) {
+  font-size: 0.64em;
+}
+msup > mrow:nth-child(2) > mn {
+  font-size: 0.8em;
+}
+mroot > mn:nth-child(2) {
+  font-size: 0.64em;
+}
+mroot > mrow:nth-child(2) > mn {
+  font-size: 0.8em;
+}
+mrow[class="prod"] > munder:nth-child(1) {
+  vertical-align: middle;
+}
+mrow[class="prod"] > mover:nth-child(1) {
+  vertical-align: middle;
+}
+mrow[class="prod"] > munderover:nth-child(1) {
+  vertical-align: middle;
+}
+mrow[class="sum"] > munder:nth-child(1) {
+  vertical-align: middle;
+}
+mrow[class="sum"] > mover:nth-child(1) {
+  vertical-align: middle;
+}
+mrow[class="sum"] > munderover:nth-child(1) {
+  vertical-align: middle;
+}
+
+.gsfInput *{font-family:arial !important;}
+.gsfInput msqrt::before{top:0;}
+.gsfInput mroot::before{top:0;}
+button msqrt::before{top:0;}
+button mroot::before{top:0;}
+msqrt msqrt::before{left:-11px;width:11px;}

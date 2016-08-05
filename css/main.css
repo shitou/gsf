@@ -1,0 +1,79 @@
+body{margin:0;padding:0}
+iframe{vertical-align:middle;overflow:hidden;border:none;}
+
+.bgSelect{background-color:#ccc;}
+[contenteditable]{min-width:4px;display:inline-flex;display:inline-block\0;outline:none;vertical-align:middle;min-height:16px;position:relative;z-index:1}
+[contenteditable]:focus{}
+.gsfInput{-webkit-user-select:none}
+.bg6{background-color:#bbb; min-width: 6px;display:inline-flex;display: inline-block\0; min-height: 10px;}
+.bgnone{background-color:inherit;min-width:2px;}
+.cur{cursor:pointer;}
+.bgI{display:inline-block;background-color: #bbb;min-width: 8px;height:12px;}
+.math{text-align:center;}
+ul{list-style:none;margin:0px;padding:0px;}
+.gsfDialog{border:1px solid #aaa;background-color: #fff;}
+.gsfTitle{background-color: #aaa;padding:10px;color: #fff;}
+.gsfContent{}
+.gsfTools{padding:5px;background-color: #ccc}
+.gsfTools .math{cursor: pointer;}
+.gsfBaseTool{}
+.gsfBaseTool ul:after,.gsfUseTool .math,.gsfGGtitle:after{content:"";display:block;clear:both;overflow:hidden;}
+.gsfBaseTool ul{width:800px;}
+.gsfBaseTool li{position:relative;margin:2px;width:9%;float:left;height:40px;background-color: #eee;text-align: center;}
+.gsfBaseTool li .gbtDown{position:absolute;display:none;top:40px;left:0;width:200px;text-align:left;z-index:99;background-color:#fff;}
+.gsfBaseTool li .gbtName{display:inline;vertical-align: middle;}
+.gsfBaseTool li .gbtName .math{overflow:hidden;}
+.gsfBaseTool li:hover .gbtDown{display:block;background-color: #fff;border:1px solid #ccc;}
+.gsfGGContent{padding-left:10px;}
+.gsfUseTool .math{width:800px;background-color: #fff;margin:2px;}
+.gsfUseTool .math>*{vertical-align: middle;margin:0 5px;border: none;outline: none;background: #fff;}
+.gsfGGtitle{margin-top: 5px;}
+.gsfGGtitle li{float:left;background-color:#fff;border:1px solid #555;margin:0 5px;padding:0 10px;cursor: pointer;overflow:hidden;}
+.gsfGGtitle li.active{color:#fff;background-color: #06c;border:1px solid #06c;}
+.gsfGGList{border:1px solid #555;position:relative;top:-1px;width:800px;background-color: #fff;overflow:hidden;}
+.gsfRow{margin:5px 0}
+.gsfRow .math>*{margin:0 15px;border: none;outline: none;background: #fff;}
+.gsfInput{background-color: #fff;min-height:220px;margin:10px;overflow:auto;}
+
+.gbzf{padding:10px;}
+.gbgDown .math>*{border: none;outline: none;background: #fff;}
+.gbzf:after{display:block;content:"";clear:both;overflow:hidden;}
+.gbzf>*{cursor:default;float:left;padding:5px;text-align:center;}
+.gbzf>*:hover{background-color:#ccc;}
+.selGs:hover{background-color:#dde !important;}
+.gbtDown .math{display:block;padding:5px;}
+.gbzf>*{float:left;width:22px;height:30px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+.bt1>.math>*{float:left;width:20%;height:30px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+.gbtDown>.math>*>*,.gbzf>*>*{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+.gsfBaseTool li .gbtDown.bt1{width:425px;}
+.bt1>.math{width:200px;float:left;border-right:1px solid #ccc;}
+.bt1>.math:last-child{border-right:none}
+.bt2 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+.bt2 .math>mfrac{display:block !important;padding:10px;}
+
+.bt3 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+.bt4 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+.bt5 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+.bt6 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+.bt7 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+.gsfBaseTool li .gbtDown.bt8{width:300px;}
+.bt8 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+
+.gsfBaseTool li .gbtDown.bt9{width:300px;}
+.bt9 .math>*{float:left;width:25%;height:80px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+
+.bt10 .math>*{float:left;width:25%;height:50px;overflow:hidden;position:relative;border: none;outline: none;background: #fff;}
+
+.edit{background-color:#bbb;padding:8px 4px;}
+
+.gsfResult{margin: 0px 20px;}
+.latexTxt{width:600px;}
+
+#MathJax_Message{display:none !important;}

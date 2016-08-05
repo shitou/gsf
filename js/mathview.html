@@ -1,0 +1,39 @@
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/mathml2.css"/>
+<script src="jquery.min.js"></script>
+<style>
+body{margin:0px;padding:0px;-webkit-user-select:none;-moz-user-select:none;}
+</style>
+<body>
+	
+</body>
+<script>
+	function updateKuohao(){
+		$(".noedit1").each(function(){
+			var height1 = parseInt($(this).css("fontSize"))+2;
+			var height2 = $(this).siblings().not(".noedit1,:empty").height();
+			if(height1>height2)return;
+			$(this).css({
+				transform:"scale(1,"+height2/height1+")",
+				display:"inline-block"
+			});
+		});
+		updateFuhao();
+	}
+	function updateFuhao(){
+		$(".noedit2").each(function(){
+			var width1 = $(this).width();
+			var width2 = $(this).parent().parent().width();
+			if(width1>width2)return;
+			$(this).css({
+				display:"inline-block",
+				transform:"scale("+width2/width1+",1)"
+			});
+		});
+	}
+	var mathml = decodeURIComponent(location.search.substring(1));
+	document.body.innerHTML = mathml;
+	updateKuohao();
+	
+</script>

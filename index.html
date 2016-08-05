@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>测试</title>
+<link rel="stylesheet" href="css/gsfMain.css"/>
+<link rel="stylesheet" href="css/mathml2.css"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/LaTeXMathML.js"></script>
+<script src="js/gsfMain.js"></script>
+<script>
+	$(function(){
+		$.editCurr = $(".edit").get(0);
+		InitGsf({
+			clickBtn:"#btnInsert",
+			input:".edit"
+		});
+	});
+</script>
+<style>
+	.edit{border:1px solid #aaa;padding:10px;}
+	img{vertical-align:middle;}
+</style>
+</head>
+<body>
+<p><button id="btnInsert">插入公式</button></p>
+<p>* 编辑Latex公式</p>
+<div class="edit" contenteditable="true">
+	<img src="http://latex.codecogs.com/gif.latex?111\sqrt{33\lim_{2\frac{dddddd}{x}}}"/>
+</div>
+<p>* 编辑Mathml公式</p>
+<div class="edit" contenteditable="true">
+	<iframe height="40" scrolling="no" width="94" onload="top.loadGs(this)" src="js/mathview.html?%3Cspan%20class%3D%22math%20cur%22%20contenteditable%3D%22false%22%3E%0A%09%09%09%09%3Cmrow%3E%0A%09%09%09%09%09%3Cmrow%20class%3D%22bgnone%22%3E%3C%2Fmrow%3E%3Cmfrac%3E%3Cmrow%3E%3Cmo%3E%E2%88%92%3C%2Fmo%3E%3Cmi%3Eb%3C%2Fmi%3E%3Cmo%3E%C2%B1%3C%2Fmo%3E%3Cmsqrt%3E%3Cmrow%3E%3Cmsup%3E%3Cmrow%3E%3Cmn%3Eb%3C%2Fmn%3E%3C%2Fmrow%3E%3Cmrow%3E%3Cmn%3E2%3C%2Fmn%3E%3C%2Fmrow%3E%3C%2Fmsup%3E%3Cmo%3E%E2%88%92%3C%2Fmo%3E%3Cmn%3E4%3C%2Fmn%3E%3Cmi%3Ea%3C%2Fmi%3E%3Cmi%3Ec%3C%2Fmi%3E%3C%2Fmrow%3E%3C%2Fmsqrt%3E%3C%2Fmrow%3E%3Cmrow%3E%3Cmn%3E2%3C%2Fmn%3E%3Cmi%3Ea%3C%2Fmi%3E%3C%2Fmrow%3E%3C%2Fmfrac%3E%3Cmrow%20class%3D%22bgnone%22%3E%3C%2Fmrow%3E%0A%09%09%09%09%3C%2Fmrow%3E%0A%09%09%09%3C%2Fspan%3E">&lt;iframe&gt;</iframe>
+</div>
+<p>+++++++++++++++++双击公式进入编辑+++++++++++++++++++</p>
+</body>
+</html>
